@@ -1,0 +1,36 @@
+/* Deliberately small: two legal pages don't need a build step or a framework. */
+:root {
+  color-scheme: light dark;
+  --ink: #1b1f1a;
+  --muted: #5c635a;
+  --ground: #f7f6f2;
+  --card: #fff;
+  --rule: #e2ded4;
+  --accent: #c75c22;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #e8e6e0; --muted: #a1a79c; --ground: #12140f;
+    --card: #1c1f19; --rule: #33372e; --accent: #e0874a;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  padding: 2rem 1.25rem 4rem;
+}
+main { max-width: 46rem; margin: 0 auto; }
+h1 { font-size: 2rem; letter-spacing: -0.02em; margin: 0 0 .35rem; }
+h2 { font-size: 1.15rem; margin: 2.25rem 0 .5rem; letter-spacing: -0.01em; }
+.lede { color: var(--muted); font-size: 1.1rem; margin: 0 0 1.5rem; }
+.updated { color: var(--muted); font-size: .9rem; margin: 0 0 2rem; }
+p, li { color: var(--ink); }
+ul { padding-left: 1.15rem; }
+li { margin: .35rem 0; }
+a { color: var(--accent); }
+nav { display: flex; gap: 1.25rem; margin: 2rem 0 0; }
+footer { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .9rem; }
+.back { display: inline-block; margin-bottom: 1.5rem; font-size: .95rem; }
